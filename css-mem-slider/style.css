@@ -2,3 +2,85 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background: #292929;
+}
+.slider {
+    overflow: hidden;
+    display: grid;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.slider-control a {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: 0.3s ease all;
+}
+.slider-control:hover a {
+    background: none;
+    border: 0.1rem solid blue;
+}
+.slider-items,
+.slider-captions {
+    color: #ffffff;
+    display: flex;
+    transition: 0.8s ease all;
+}
+.slider-item__caption, .slider-item__image {
+    flex: 1 0 100%;
+}
+.slider-control {
+    padding: 0.5rem;
+}
+.slider-controls {
+    display: flex;
+    grid-area: controls;
+}
+.slider-items {
+    grid-area: items;
+}
+.slider-captions {
+    grid-area: captions;
+}
+#slide1:target ~ .slider .slider-items,
+#slide1:target ~ .slider .slider-captions{
+ transform: translate(0,0);
+}
+#slide1:target ~ .slider .slider-controls .slider-control:nth-child(1) a{
+    background: blue;
+}
+
+#slide2:target ~ .slider .slider-items,
+#slide2:target ~ .slider .slider-captions{
+ transform: translate(-100%,0);
+}
+#slide2:target ~ .slider .slider-controls .slider-control:nth-child(2) a{
+    background: blue;
+}
+
+#slide3:target ~ .slider .slider-items,
+#slide3:target ~ .slider .slider-captions{
+ transform: translate(-200%,0);
+}
+#slide3:target ~ .slider .slider-controls .slider-control:nth-child(3) a{
+    background: blue;
+}
+
+
+#slide4:target ~ .slider .slider-items,
+#slide4:target ~ .slider .slider-captions{
+ transform: translate(-300%,0);
+}
+#slide4:target ~ .slider .slider-controls .slider-control:nth-child(4) a{
+    background: blue;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .slider {
+        
+    }
+}
