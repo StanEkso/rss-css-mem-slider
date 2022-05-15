@@ -97,6 +97,7 @@ z-index: 1;
 
 @media (min-width: 320px) and (max-width: 768px) {
     .slider {
+        grid-template-columns: 100%;
         grid-template-areas: "items"
         "controls"
         "captions";
