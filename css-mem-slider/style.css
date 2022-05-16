@@ -51,10 +51,10 @@ body {
 .slider-controls {
 background: #292929;
 z-index: 1;
-}
-.slider-controls {
+
     display: flex;
     grid-area: controls;
+    align-items: center;
 }
 .slider-items {
     grid-area: items;
